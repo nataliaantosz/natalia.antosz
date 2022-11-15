@@ -1,1 +1,11 @@
+name: learn-github-terraform
+on: [push]
+jobs:
+  name: check-bats-version
+    runs-on: windows-latest
+    steps:
+      - uses: hashicorp/setup-terraform@v2
+
+      - run: terraform init
+      - run: bats -v
 
